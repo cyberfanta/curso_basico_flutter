@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'course_2_view.dart';
+class Course2View extends StatefulWidget {
+  const Course2View({Key? key}) : super(key: key);
 
-class Course1View extends StatefulWidget {
-  const Course1View({Key? key}) : super(key: key);
-
-  static const routeName = '/Course1View';
+  static const routeName = '/Course2View';
 
   @override
-  Course1ViewState createState() => Course1ViewState();
+  Course2ViewState createState() => Course2ViewState();
 }
 
-class Course1ViewState extends State<Course1View> {
+class Course2ViewState extends State<Course2View> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: 360,
         height: 800,
         child: Stack(
@@ -66,7 +64,7 @@ class Course1ViewState extends State<Course1View> {
                     ),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, Course2View.routeName);
+                        Navigator.pop(context);
                       },
                       style: ButtonStyle(
                         backgroundColor:
@@ -80,7 +78,7 @@ class Course1ViewState extends State<Course1View> {
                         ),
                       ),
                       child: const Text(
-                        "Ir",
+                        "Regresar",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
